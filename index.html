@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meine Testseite – Google Analytics</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9F959X90CW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9F959X90CW');
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+        }
+
+        a {
+            display: block;
+            margin: 10px 0;
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            background: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1f6391;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Willkommen auf meiner Testseite</h1>
+    <p>Diese Seite dient zur Analyse mit Google Analytics.</p>
+
+    <h2>Navigation</h2>
+    <a href="#seite1"
+        onclick="gtag('event', 'klick', {'event_category': 'Navigation', 'event_label': 'Seite 1'});">Seite 1</a>
+    <a href="#seite2"
+        onclick="gtag('event', 'klick', {'event_category': 'Navigation', 'event_label': 'Seite 2'});">Seite 2</a>
+    <a href="#seite3"
+        onclick="gtag('event', 'klick', {'event_category': 'Navigation', 'event_label': 'Seite 3'});">Seite 3</a>
+
+    <button onclick="gtag('event', 'button_klick', {'event_category': 'Interaktion', 'event_label': 'Demo Button'});">
+        Klick mich (Demo-Button)
+    </button>
+
+    <footer>
+        © 2026 – Laborübung Google Analytics
+    </footer>
+</body>
+
+</html>
